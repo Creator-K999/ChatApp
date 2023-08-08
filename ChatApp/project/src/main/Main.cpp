@@ -9,7 +9,17 @@ Main::Main(int argc, char* argv[])
     QObject::connect(dialogWindow.okCancelBtnBox, &QDialogButtonBox::clicked, [&](QAbstractButton* button)
     {
         if (button == dialogWindow.okCancelBtnBox->button(QDialogButtonBox::Ok))
-            mainWindow.onlineLstWdgt->addItem("Ok");
+        {
+            QString name{ dialogWindow.nameLnEdt->text() };
+
+            if (name.isEmpty())
+            {
+                dialogWindow.noNameProvided = true;
+                return;
+            }
+
+            mainWindow.onlineLstWdgt->addItem(name);
+        }
     });
 }
 
@@ -21,7 +31,7 @@ int Main::Run()
 {
     mainWindow.show();
 
-    if (dialogWindow.exec() == QDialog::Rejected)
+    if (dialogWindow.exec() == QDialog::Rejected || dialogWindow.noNameProvided)
         return 0;
 
 	return app.exec();

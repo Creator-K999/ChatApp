@@ -5,6 +5,7 @@ startDlgClass::startDlgClass(QWidget* parent)
 {
     ui.setupUi(this);
     okCancelBtnBox = findChild<QDialogButtonBox*>("okCancelBtnBox");
+    nameLnEdt = findChild<QLineEdit*>("nameLnEdt");
 }
 
 startDlgClass::~startDlgClass()
