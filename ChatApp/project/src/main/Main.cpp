@@ -1,24 +1,25 @@
 #include "main/Main.h"
 
 Main::Main(int argc, char* argv[])
-	: app(argc, argv)
+	: m_App(argc, argv)
 {
-    if (!mainWindow.onlineLstWdgt || !dialogWindow.okCancelBtnBox)
+    if (!m_MainWindow.m_OnlineLstWdgt || !m_DialogWindow.m_OkCancelBtnBox)
         throw std::runtime_error("Failed to find some childs");
 
-    QObject::connect(dialogWindow.okCancelBtnBox, &QDialogButtonBox::clicked, [&](QAbstractButton* button)
+    QObject::connect(m_DialogWindow.m_OkCancelBtnBox, &QDialogButtonBox::clicked, [&](QAbstractButton* button)
     {
-        if (button == dialogWindow.okCancelBtnBox->button(QDialogButtonBox::Ok))
+        if (button == m_DialogWindow.m_OkCancelBtnBox->button(QDialogButtonBox::Ok))
         {
-            QString name{ dialogWindow.nameLnEdt->text() };
+            QString name{ m_DialogWindow.m_NameLnEdt->text() };
 
             if (name.isEmpty())
             {
-                dialogWindow.noNameProvided = true;
+                m_DialogWindow.m_NoNameProvided = true;
                 return;
             }
 
-            mainWindow.onlineLstWdgt->addItem(name);
+            m_MainWindow.m_OnlineLstWdgt->addItem(name);
+            m_MainWindow.m_Name = name;
         }
     });
 }
@@ -29,10 +30,10 @@ Main::~Main()
 
 int Main::Run()
 {
-    mainWindow.show();
+    m_MainWindow.show();
 
-    if (dialogWindow.exec() == QDialog::Rejected || dialogWindow.noNameProvided)
+    if (m_DialogWindow.exec() == QDialog::Rejected || m_DialogWindow.m_NoNameProvided)
         return 0;
 
-	return app.exec();
+	return m_App.exec();
 }

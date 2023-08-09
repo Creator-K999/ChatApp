@@ -15,7 +15,7 @@ public:
 	int Run();
 
 private:
-	QApplication app;
-	ChatApp mainWindow;
-	startDlgClass dialogWindow;
+	QApplication m_App;
+	ChatApp m_MainWindow;
+	startDlgClass m_DialogWindow;
 };

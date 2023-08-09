@@ -23,49 +23,26 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="project\ChatApp.qrc">
+    <QtRcc Include="ChatAppServer.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
-    <QtUic Include="project\ui\ChatApp.ui">
+    <QtUic Include="ChatAppServer.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtMoc Include="project\include\Qt\ChatApp.h">
+    <QtMoc Include="ChatAppServer.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <ClCompile Include="project\src\Qt\ChatApp.cpp">
+    <ClCompile Include="ChatAppServer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="project\src\main\Application.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="project\src\Qt\startDlg.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="project\src\main\Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="project\src\processing\networking\Sender.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <QtUic Include="project\ui\startDlg.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-  </ItemGroup>
-  <ItemGroup>
-    <QtMoc Include="project\include\Qt\startDlg.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="project\include\main\Main.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="project\include\processing\networking\Sender.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ResourceCompile Include="$pro_name$.rc">
+    </ResourceCompile>
+    <None Include="$pro_name$.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="$pro_name$.def">
+      <Filter>Resource Files</Filter>
+    </None>
+
   </ItemGroup>
 </Project>

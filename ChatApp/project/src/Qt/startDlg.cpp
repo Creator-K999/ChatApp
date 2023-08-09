@@ -1,11 +1,11 @@
-#include "../../include/Qt/startDlg.h"
+#include "Qt/startDlg.h"
 
 startDlgClass::startDlgClass(QWidget* parent)
     : QDialog(parent)
 {
-    ui.setupUi(this);
-    okCancelBtnBox = findChild<QDialogButtonBox*>("okCancelBtnBox");
-    nameLnEdt = findChild<QLineEdit*>("nameLnEdt");
+    m_Ui.setupUi(this);
+    m_OkCancelBtnBox = findChild<QDialogButtonBox*>("okCancelBtnBox");
+    m_NameLnEdt = findChild<QLineEdit*>("nameLnEdt");
 }
 
 startDlgClass::~startDlgClass()

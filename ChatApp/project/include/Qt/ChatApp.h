@@ -1,7 +1,11 @@
 #pragma once
 
-#include <QtWidgets/QMainWindow>
 #include "ui_ChatApp.h"
+
+#include <QtWidgets/QMainWindow>
+#include <QtWidgets/QShortcut.h>
+
+#include "processing/networking/Sender.h"
 
 class ChatApp : public QMainWindow
 {
@@ -12,8 +16,18 @@ public:
     ~ChatApp();
 
 public:
-    QListWidget* onlineLstWdgt;
+    void sendMessage();
+
+public:
+    QString m_Name;
+    //Sender messageSender;
+
+public:
+    QLineEdit* m_MessageLnEdt;
+    QListWidget* m_OnlineLstWdgt;
+    QListWidget* m_MessagesLstWdgt;
 
 private:
-    Ui::ChatAppClass ui;
+    Ui::ChatAppClass m_Ui;
+    QShortcut m_Shortcut;
 };

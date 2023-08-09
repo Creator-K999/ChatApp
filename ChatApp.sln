@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ChatApp", "ChatApp\ChatApp.vcxproj", "{E28B3C32-B145-4ED9-AB24-80B644E88702}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ChatAppServer", "ChatAppServer\ChatAppServer.vcxproj", "{8D57B11F-10D5-4361-96BB-BD34D49A0913}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -15,6 +17,10 @@ Global
 		{E28B3C32-B145-4ED9-AB24-80B644E88702}.Debug|x64.Build.0 = Debug|x64
 		{E28B3C32-B145-4ED9-AB24-80B644E88702}.Release|x64.ActiveCfg = Release|x64
 		{E28B3C32-B145-4ED9-AB24-80B644E88702}.Release|x64.Build.0 = Release|x64
+		{8D57B11F-10D5-4361-96BB-BD34D49A0913}.Debug|x64.ActiveCfg = Debug|x64
+		{8D57B11F-10D5-4361-96BB-BD34D49A0913}.Debug|x64.Build.0 = Debug|x64
+		{8D57B11F-10D5-4361-96BB-BD34D49A0913}.Release|x64.ActiveCfg = Release|x64
+		{8D57B11F-10D5-4361-96BB-BD34D49A0913}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

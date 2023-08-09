@@ -12,10 +12,10 @@ public:
     ~startDlgClass();
 
 public:
-    bool noNameProvided{};
-    QDialogButtonBox* okCancelBtnBox;
-    QLineEdit* nameLnEdt;
+    bool m_NoNameProvided{};
+    QDialogButtonBox* m_OkCancelBtnBox;
+    QLineEdit* m_NameLnEdt;
 
 private:
-    Ui::startDlgClass ui;
+    Ui::startDlgClass m_Ui;
 };
